@@ -47,7 +47,9 @@ public class Incidents{
 	private List<String> lines = new ArrayList<>();
 	private List<Object[]> incidents = new ArrayList<Object[]>();
 	private List<String[]> incident;
-	private String incidentsfile= "C:\\Users\\vjone\\eclipse-workspace\\ithelpdesk\\data\\incidentsfile.txt";
+	private String incidentsfile= "C:\\xampp\\tomcat\\webapps\\ithelpdesk\\data\\incidentsfile.txt";
+
+	//private String incidentsfile= "C:\\Users\\vjone\\eclipse-workspace\\ithelpdesk\\data\\incidentsfile.txt";
 	
 	
 	public Incidents()

@@ -41,8 +41,11 @@ public class Customers {
 			private int AccountNumber;
 			private float AccountBalance;
 			private String AccountName;
-			private String filename= "C:\\Users\\vjone\\eclipse-workspace\\ithelpdesk\\data\\customer.txt";
-			private String directorypath="C:\\Users\\vjone\\eclipse-workspace\\ithelpdesk\\";
+			private String filename= "\\data\\customer.txt";
+			
+			private String directorypath="C:\\xampp\\tomcat\\webapps\\ithelpdesk";
+			
+			//private String directorypath="C:\\Users\\vjone\\eclipse-workspace\\ithelpdesk\\";
 			
 			public Customers() {
 				//super();
