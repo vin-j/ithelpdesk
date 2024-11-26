@@ -1,0 +1,4 @@
+1,incidents,incidents description,incindents detail description,standard,2024-11-15 17:56:01,2024-11-15 17:56:01,1,1
+2,login,login description,login detail description,standard,2024-11-15 17:56:01,2024-11-15 17:56:01,1,1
+3,users,users description,users detaildescription,standard,2024-11-15 17:56:01,2024-11-15 17:56:01,1,1
+4,reports,reports description,reports detaildescription,standard,2024-11-15 17:56:01,2024-11-15 17:56:01,1,1

@@ -1,0 +1,11 @@
+1,Total Number of Incidents: The overall count of incidents...,24
+2,Incidents by Severity: The distribution of incidents based on severity (e.g. Critical High Medium Low)...,24
+3,Incidents by Priority: The distribution of incidents based on priority (e.g. High Medium Low)...,24
+4,Incidents by Assigned User: The number of incidents assigned to each user...,24
+5,Incidents by Customer: The number of incidents reported by each customer...,24
+6,Incidents by Creator: The number of incidents created by each user...,24
+7,Average Description Length: The average length of incident descriptions...,24
+8,Incidents Open/Closed (if applicable): If there's a status field or a timestamp indicating when the incident was resolved you can calculate how many incidents are still open and how many are closed...,24
+9,Average Incident Severity by Priority: Calculate the average severity of incidents for each priority...,24
+10,Incident Distribution by Customer: Calculate the percentage of incidents created by each customer...,24
+11,Incidents Assigned to Each Person: Calculate how many incidents are assigned to each person and their proportion relative to the total...,24

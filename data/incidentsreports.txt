@@ -1,0 +1,11 @@
+1,Total Number of Incidents.,24
+2,Incidents by Severity.Critical High Medium Low,24
+3,Incidents by Priority.High Medium Low.,24
+4,Incidents by Assigned User.,24
+5,Incidents by Customer.,24
+6,Incidents by Creator.,24
+7,Average Description Length.,24
+8,Incidents Open/Closed.,24
+9,Average Incident Severity by Priority.,24
+10,Incident Distribution by Customer.,24
+11,Incidents Assigned to Each Person.,24
