@@ -30,6 +30,7 @@ public class filesubmit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected String filesubmit = "C:\\xampp\\tomcat\\webapps\\ithelpdesk\\data\\files.txt";
 	protected String filelocation = "files";   
+    protected String filepath = "http://73.72.20.155:8080/ithelpdesk/files/";
  
 	/**
      * @see HttpServlet#HttpServlet()
@@ -54,9 +55,8 @@ public class filesubmit extends HttpServlet {
 	{
 	    response.setContentType("text/html");
 	    PrintWriter out = response.getWriter();
-	    PrintWriter writer = new PrintWriter(new FileWriter(filesubmit,true));
-	    
-	    try {
+
+	    		try {
 	        // Retrieve the uploaded file part
 	        Part filePart = request.getPart("file");
 	        
@@ -80,12 +80,16 @@ public class filesubmit extends HttpServlet {
 	            filePart.write(uploadPath + fileName);
 	            
 	            //add details to file
-	        	writer.println(fileName + ","  + contentType + "," + fileSize + "," + filelocation + "," + LocalDateTime.now());			
-	        	writer.close();
-
+	            try{
+	            	PrintWriter writer = new PrintWriter(new FileWriter(filesubmit,true));
+	            	writer.println(fileName + ","  + contentType + "," + fileSize + "," + filelocation + "," + LocalDateTime.now());			
+	            	writer.close();
+	            }catch(IOException e) {
+	                e.printStackTrace();
+	            }	
 
 	            out.println("<p>File uploaded successfully to: " + uploadPath + fileName + "</p>");
-
+	            out.println("<p>File link</p>:  " + filepath + fileName + "</p>");	
 	            
 	            
 	            request.setAttribute("fileName", fileName);

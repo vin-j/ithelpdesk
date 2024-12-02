@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+
+/* General header styling */
+.header {
+    background: #01377D; /* Deep blue background */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center-align text and content */
+    padding: 20px 10px; /* Add spacing around content */
+    border-bottom: 4px solid #011d40; /* Slightly darker blue bottom border */
+    border-top: 4px solid #019c59;
+    
+}
+
+/* Header heading */
+.header h1 {
+    font-size: 28px; /* Large font size for the title */
+    font-weight: bold; /* Emphasize the title */
+    margin: 0; /* Remove default margin */
+    color: white; /* Ensure the title is readable against the blue background */
+}
+
+/* Header image styling */
+.header img {
+    max-width: 100px; /* Limit the image width for responsive design */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+}
+
+/* Horizontal rule styling */
+hr {
+    border: none;
+    border-top: 2px solid #cccccc; /* Light gray line for separation */
+    margin: 20px 0;
+}
+
+
+/* Button styling */
+.form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.form button:hover {
+    background-color: #0056b3;
+}
+
+

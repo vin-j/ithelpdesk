@@ -1,7 +1,7 @@
 <% 
 
 //**********************************************************************************************
-//	Project:		VCL helpdesk application | login | Incidents | Users 
+//	Project:		VCL helpdesk application | login | Incidents | Users | Reports 
 //	Name:			
 //	Date Started:	9/5/2024
 //	Update:	...
@@ -15,16 +15,14 @@
 //
 //********************************************************************************************
 %>
-
-
 <%@page import="ithelpdesk.Customers, java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>VCL helpdesk application | login | Incidents | Users  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Desk Application Documentation</title>
 
 
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
@@ -34,8 +32,12 @@
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css' />
     <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
     <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
-	
-	
+
+
+	<link rel="stylesheet" type=text/css href="header.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" type=text/css href="menu.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" type=text/css href="style.css"> 
+		
 	<script>
 
            $(document).ready(function() {
@@ -48,39 +50,34 @@
            });
 
      </script>
-	
+
+
+
 </head>
+
+
+
 <body>
 
 
-<div id="wrapper">
-
-<%@ include file="header.jsp" %>  
-
-<% 
-
-	Customers ct = new Customers();
-	ct.ReadCustomers();
+<div class="container">
+	
+	
+	<%@ include file="header.jsp" %>  
+	
+	<%@ include file="menu.jsp" %>  
+	
+	<% 
+	
+		Customers ct = new Customers();
+		ct.ReadCustomers();
+		
+	
+	%>  
 	
 
-%>  
-
-
-<div>
-
-files |
-<a href="fileentity"> files </a> | 
-<a href="file.jsp">file submit</a> |
-<a href="reports.jsp">reports</a> | 
-<a href="create-account.jsp">Create a new customer</a> | 
-<a href="customer.jsp">customers</a> | 
-<a href="incident.jsp?incidentadd=1"> Create a new incident</a> | 
-<a href="incidents.jsp">incidents</a>  
- 
-<hr />
-
-</div>
-
+	
+	<h1>customer</h1>
   <table id='table_id' class='display' >
             <thead>
                 <tr>
@@ -130,13 +127,12 @@ files |
 				
 					%>
 
-						<form action="incidents.jsp" method="POST">
-									<input type="hidden" name="incidentsid" value=0	 />
-    								<input type="hidden" name="incidentscreateduserid" value=<%= desiredString %>	 />
-									<p id="demo"></p>
-    								<button id="button" type="submit" onclick=""  >View</button>
-						</form>
-
+							<form action="incidents.jsp" method="POST">
+										<input type="hidden" name="incidentsid" value=0	 />
+	    								<input type="hidden" name="incidentscreateduserid" value=<%= desiredString %>	 />
+										<p id="demo"></p>
+	    								<button id="button" type="submit" onclick="">View</button>
+							</form>
 
 
 						
@@ -154,10 +150,21 @@ files |
             </tbody>
         </table>
 
-</div>
 
-
-
+<%@include file="footer.jsp" %>
+	
+	
+	
+	
+	
+	
+		</div>
 </body>
 </html>
+
+
+
+
+
+
 

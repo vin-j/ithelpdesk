@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+
+/* Navigation container styling */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Spacing between menu items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual list item styling */
+.nav-links li {
+    flex: 1 1 auto;
+}
+
+/* Link styling */
+.nav-links a {
+    display: block;
+    text-decoration: none;
+    color: white; /* White text for better readability */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #01377D; /* Deep blue background */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effects */
+.nav-links a:hover {
+    background-color: #26b170; /* Vibrant green hover background */
+    color: white; /* Ensure text remains white */
+}

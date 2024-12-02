@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+/* General footer styling */
+.footer {
+    text-align: center; /* Center-align text and content */
+    padding: 20px;
+    background: #26b170; /* Vibrant green background */
+    color: white; /* Set text color to white for contrast */
+    border-top: 2px solid #1e905a; /* Slightly darker green border for contrast */
+}
+
+/* Footer heading */
+.footer h1 {
+    font-size: 24px; /* Adjust title size */
+    font-weight: bold;
+    color: white; /* Ensure text is visible against green background */
+    margin-bottom: 15px;
+}
+
+/* Footer image styling */
+.footer img {
+    max-width: 150px; /* Limit the image width for responsive design */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+    border-radius: 8px; /* Optional: Add slight rounding to the image corners */
+}
+
+/* Horizontal rule styling */
+hr {
+    border: none;
+    border-top: 2px solid #1e905a; /* Match footer border color */
+    margin: 20px 0;
+}

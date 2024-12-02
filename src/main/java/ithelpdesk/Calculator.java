@@ -34,7 +34,8 @@ public class Calculator{
 		        int outageCount = 0;
 		        int majorCount = 0;
 		        int minorCount = 0;
-
+		        int priorityveryhighCount = 0,priorityhighCount=0,prioritymediumCount=0,prioritylowCount=0 ;
+		        
 		        		BufferedReader in =new BufferedReader(
 						new FileReader(incidentsfile));
 						String line = null;
@@ -55,6 +56,25 @@ public class Calculator{
 			                	default:
 			                		break;
 							}
+							
+							switch (fields[12].toLowerCase()) {
+		                		case "veryhigh":
+		                			priorityveryhighCount++;
+		                			break;
+		                		case "high":
+		                			priorityhighCount++;
+		                			break;
+		                		case "medium":
+		                			prioritymediumCount++;
+		                			break;
+		                		case "low":
+		                			prioritylowCount++;
+		                			break;
+	
+		                		default:
+		                			break;
+							}
+							
 							totalIncidents++;
 						}
 				
@@ -62,7 +82,9 @@ public class Calculator{
 						writer.println("1" + "," + "Number of Incidents: " 	+ "," + totalIncidents);
 						writer.println("2" + "," + "Number of Outages: " 	+ "," + outageCount);
 						writer.println("3" + "," + "Number of Major Incidents: " + "," + majorCount);
-						writer.println("3" + "," + "Number of Minor Incidents: " + "," + minorCount);
+						writer.println("4" + "," + "Number of Minor Incidents: " + "," + minorCount);
+						writer.println("5" + "," + "Number of Minor Incidents: " + "," + minorCount);
+						
 						writer.close();
 				
 			}

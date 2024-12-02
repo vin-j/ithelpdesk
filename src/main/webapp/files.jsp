@@ -31,8 +31,9 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
 <head>
 <meta charset="ISO-8859-1">
 
-<title> VCL helpdesk application Files Reports | login | Incidents | Users  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title> VCL helpdesk application Files Reports | login | Incidents | Users  </title>
 
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
     <script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js></script>
@@ -41,8 +42,12 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css' />
     <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
     <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
-	
-	
+
+
+	<link rel="stylesheet" href="header.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="menu.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="style.css"> 
+		
 	<script>
 
            $(document).ready(function() {
@@ -55,38 +60,33 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
            });
 
      </script>
-	
+
+
+
 </head>
+
+
+
 <body>
 
 
-<div id="wrapper">
+<div class="container">
+	
 
 <%@ include file="header.jsp" %>  
 
 <%
-
+	String filelink = "http://73.72.20.155:8080/ithelpdesk/files/";
 	files file = new files();
 	List<files> filesList = file.viewfile(); 
-	
+		
 %>
 
 
-<div>
-
-files |
-<a href="fileentity"> files </a> | 
-<a href="file.jsp">file submit</a> |
-<a href="reports.jsp">reports</a> | 
-<a href="create-account.jsp">Create a new customer</a> | 
-<a href="customer.jsp">customers</a> | 
-<a href="incident.jsp?incidentadd=1"> Create a new incidents</a> | 
-<a href="incidents.jsp">incidents</a>  
-
-
+<%@ include file="menu.jsp" %>  
 <hr />
-
-
+	
+	<h1>files </h1>	
   <table id='table_id' class='display' >
             <thead>
                 <tr>
@@ -117,8 +117,8 @@ files |
                     <td> <% out.println(str.getUploadPath()); %>  </td>                         
               		<td> <% out.println( str.getUploadTime() ); %>   </td>
 					<td> 
-						<form action="files.jsp" method="get">
-									
+					
+						<form action="<%= filelink + str.getFileName() %>" method="post">			
 									<p id="demo"></p>
     								<button id="button" type="submit" onclick=""  >View</button>
 						</form>
@@ -140,8 +140,13 @@ files |
 
 
 
+<%@include file="footer.jsp" %>
 
 
+
+
+
+</div>
 </body>
 </html>
 

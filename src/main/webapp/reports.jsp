@@ -18,8 +18,6 @@
 //********************************************************************************************
 %>
 
-
-
 <%@page import="ithelpdesk.Reports, 
 java.time.LocalDateTime, 
 java.time.format.DateTimeFormatter,
@@ -33,7 +31,12 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
 <head>
 <meta charset="ISO-8859-1">
 
-<title> VCL helpdesk application Files Reports | login | Incidents | Users  </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title> VCL helpdesk application | login | Incidents | Users  </title>
+
 
 
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
@@ -43,8 +46,17 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css' />
     <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
     <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
-	
-	
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
+
+	<link rel="stylesheet" href="header.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="menu.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="style.css"> 
+		
 	<script>
 
            $(document).ready(function() {
@@ -57,40 +69,32 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
            });
 
      </script>
-	
+
+
+
 </head>
+
+
+
 <body>
 
 
-<div id="wrapper">
+<div class="container">
+
 
 <%@ include file="header.jsp" %>  
 
-<% 
-	
-	int incidents = 0;
-	
+<% 	
+	int incidents = 0;	
 	Reports reports = new Reports();
-	
-	
 %>
 
-
-<div>
-
-files |
-<a href="fileentity"> files </a> | 
-<a href="file.jsp">file submit</a> |
-<a href="reports.jsp">reports</a> | 
-<a href="create-account.jsp">Create a new customer</a> | 
-<a href="customer.jsp">customers</a> | 
-<a href="incident.jsp?incidentadd=1"> Create a new incidents</a> | 
-<a href="incidents.jsp">incidents</a>  
-
+<%@ include file="menu.jsp" %>  
 <hr />
 
-
-  <table id='table_id' class='display' >
+<div>
+  <h1> reports </h1>	
+  <table id='table_id' class='display'>
             <thead>
                 <tr>
                     <th>reports id </th>
@@ -105,53 +109,26 @@ files |
                 </tr>
             </thead>
             <tbody>
+
 <%              int i = 1;   
                 //for(String[] str: ac.setAccount())
                 for(Object[] str: reports.viewreports())	
 				{
 %>                
                 <tr>
-         <!-- 
-                    <td width="20%">
-                    	<img src="account-pictures\<%= i %>.jpg" width="200px" />
-                    </td>
-		 -->
-                    <td width="5%" style="font-size:1.5em;">
-                        <!-- For loop logic of template -->
-                        <% out.println((str[0]));%>
-                    </td>
+        
+                    <td>   <% out.println((str[0]));%> </td>
 
-                    <td width="10%" style="font-size:1.5em;">
-                        <% out.println((str[1]));%>
-                    </td>
-                    <td width="10%" style="font-size:1.5em;">
-                        <% out.println((str[2]));%>
-                    </td>
-                    <td width="20%" style="font-size:1.5em;">
-                        <!-- For loop logic of template -->
-                        <% out.println((str[3]));%>
-                    </td>
+                    <td>   <% out.println((str[1]));%> </td>
                     
-                    <td width="20%" style="font-size:1.5em;">
-                        <!-- For loop logic of template -->
-                        <% 
-                  
-                        out.println((str[5].toString()));
-						 %>
-                        
-                        
-                    </td>
+                    <td>   <% out.println((str[2]));%> </td>
+                    
+                    <td>   <% out.println((str[3]));%>  </td>
+                    
+                    <td>   <% out.println((str[5].toString())); %> </td>
 				    
-                    
-                    <td width="10%">
-
-
-					<%
-					
-					String reportsid = str[0].toString();
-					
-			
-					%>
+				                        
+                    <td>  <% String reportsid = str[0].toString(); %>
 
 						<form action="report.jsp?reportsid=<%= reportsid %>" method="POST">
 									<input type="hidden" name="reportsid" value=0	 />
@@ -159,12 +136,6 @@ files |
 									<p id="demo"></p>
     								<button id="button" type="submit" onclick=""  >View</button>
 						</form>
-
-
-
-						
-
-							
 						
                     </td>
                 </tr>
@@ -179,9 +150,10 @@ files |
             </tbody>
         </table>
 
+</div>
 
 
-
+</div>
 
 </body>
 </html>

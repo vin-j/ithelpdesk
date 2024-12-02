@@ -1,20 +1,4 @@
-<% 
 
-//**********************************************************************************************
-//	Project:		VCL helpdesk application | login | Incidents | Users 
-//	Name:			
-//	Date Started:	9/5/2024
-//	Update:	...
-//	Management Information Systems
-//
-//
-//
-//
-//
-//
-//
-//********************************************************************************************
-%>
 
 
 <%@page import="ithelpdesk.Accounts, java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
@@ -34,7 +18,17 @@
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css' />
     <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
     <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
+	<style>
 	
+	   #wrapper {
+    margin-left: 25%;    
+	border: 1px solid #000;
+	width: 80%;
+	align: center;
+	
+	}
+	
+	</style>
 	
 	<script>
 
@@ -47,6 +41,7 @@
                
            });
 
+           
      </script>
 	
 </head>

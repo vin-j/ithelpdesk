@@ -24,9 +24,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VCL helpdesk application | login | Incidents | Users  </title>
 
-	
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
     <script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js></script>
     <script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js></script>
@@ -34,8 +36,12 @@
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css' />
     <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
     <script src='https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js'></script>
-	
-	
+
+
+	<link rel="stylesheet" href="header.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="menu.css"> <!-- Link to external CSS -->
+	<link rel="stylesheet" href="style.css"> 
+		
 	<script>
 
            $(document).ready(function() {
@@ -48,58 +54,42 @@
            });
 
      </script>
-	<style>
-	
-		.form{	
-			text-align: center; 
-			border: 1px solid gray; 
-			border-radius: 10px;"
-			
-			}			
-	</style>
+
+
+
 </head>
+
+
+
 <body>
 
 
-<div id="wrapper">
+<div class="container">
+	
 
 <%@ include file="header.jsp" %>  
+<%@ include file="menu.jsp" %>  
 
 
-
-<div>
-
-
-
-files |
-<a href="fileentity"> files </a> | 
-<a href="file.jsp">file submit</a> |
-<a href="reports.jsp">reports</a> | 
-<a href="create-account.jsp">Create a new customer</a> | 
-<a href="customer.jsp">customers</a> | 
-<a href="incident.jsp?incidentadd=1"> Create a new incident</a> | 
-<a href="incidents.jsp">incidents</a>  
  
 <hr />
 
+
+	<h1> file submit   </h1>
+	<div class="form">
+	<form id="file-submit-form" action="filesubmit" method="post"  enctype="multipart/form-data">
+	
+	<input type="file" id="file" name="file" required> <button type="submit">file submit</button> 
+	
+	</form>
+
+	</div>
+
+
+
+
+<%@include file="footer.jsp" %>
 </div>
-
-
-<div class="form">
-
-
-
-
-<form action="filesubmit" method="post"  enctype="multipart/form-data">
-
-<label>select file </label> <input type="file" id="file" name="file" required> <button type="submit">file submit</button> <br> <br> 
-
-</form>
-
-</div>
-</div>
-
-
 
 </body>
 </html>

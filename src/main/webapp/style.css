@@ -1,0 +1,192 @@
+@charset "ISO-8859-1";
+
+
+/* Specific styling for the file submit form */
+#file-submit-form {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between input and button */
+    width: 100%;
+    
+}
+
+#file-submit-form input[type="file"] {
+    font-size: 16px;
+    padding: 8px;
+    flex: 1; /* Allow input to grow as needed */
+    width: 65%;
+}
+
+#file-submit-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 25%;
+    
+}
+
+/* Button hover effect */
+#file-submit-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+#table_id thead th 
+{
+	background-color: #26b170;
+}
+
+
+
+
+/* General grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    background-color: #01377D; /* Deep blue background */
+    color: white; /* White text for contrast */
+    border-radius: 10px; /* Rounded corners for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Grid item styling */
+.grid-item {
+    background-color: #26b170; /* Vibrant green background for items */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for items */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Ensure readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for individual items */
+}
+
+/* Grid item hover effect */
+.grid-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: #019c59; /* Slightly darker green for hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 20px;
+	background-color: #f9f9f9;
+	color: #333;
+}
+
+h1, h2, h3 {
+	color: #0056b3;
+}
+
+.container {
+	max-width: 800px;
+	margin: auto;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+ul {
+	padding-left: 20px;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+
+
+/* General form container styling */
+.form {
+    width: 80%;
+    margin: 50px auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Label styling */
+.form label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* Input styling */
+.form input {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 80%;
+}
+
+/* Input styling */
+.form input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 80%;
+}
+
+
+/* Input styling */
+.form input[type="file"] {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 80%;
+}
+
+/* Button styling */
+.form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.form button:hover {
+    background-color: #0056b3;
+}
+
+
