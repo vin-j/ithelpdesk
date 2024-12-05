@@ -22,7 +22,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Help Desk Application Documentation</title>
+<title>customer</title>
 
 
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
@@ -66,6 +66,13 @@
 	<%@ include file="header.jsp" %>  
 	
 	<%@ include file="menu.jsp" %>  
+	
+	<% 
+			String email = (objectsession != null && objectsession.getAttribute("email") != null) 
+							? objectsession.getAttribute("email").toString() 
+							: "";
+	
+		%>
 	
 	<% 
 	

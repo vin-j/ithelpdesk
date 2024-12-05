@@ -35,7 +35,7 @@ java.util.*, javax.servlet.http.Cookie, java.io.PrintWriter"%>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> VCL helpdesk application | login | Incidents | Users  </title>
+<title> incident reports  </title>
 
 	<link rel=stylesheet type=text/css href=https://cdn.datatables.net/v/dt/dt-1.10.24/b-1.7.0/b-html5-1.7.0/datatables.min.css />
     <script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js></script>

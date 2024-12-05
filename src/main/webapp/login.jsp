@@ -11,7 +11,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>login vcl helpdesk</title>
+<title>login </title>
 
 
 <link rel="icon" type="image/x-icon" href="images/vcl__helpdesk_ico.ico">
@@ -28,14 +28,21 @@
 
 		<%@include file="header.jsp" %>
 
-	
+		<% 
+			
+		
+			String loggedinuser = (objectsession != null && objectsession.getAttribute("loggedinuser") != null) 
+							? objectsession.getAttribute("loggedinuser").toString() 
+							: "";
+		
+		%>
 		
 			<h3> Sign in below  </h3>
 			
 			<form name="login" action="check-login.jsp" method="POST" class="form">
 		  	
 			  	<label for="email">Email:</label>
-			  	<input type="email" id="email" name="email" placeholder="Enter email" required>
+			  	<input type="email" id="email" name="email" placeholder="Enter email" value="<%= loggedinuser %>" required>
 			  	<label for="pwd">Password:</label>
 			  	<input type="password" id="pwd" name="pwd" minlength="8" placeholder="Enter Password" required>
 			
@@ -48,11 +55,10 @@
 			</form>
 
 			<form>
-			<input type="checkbox" checked="checked" name="remember"> Remember me
+			<input type="checkbox" checked="checked" name="rememberme"> Remember me
 			    
 			<div>	<span class="psw">Forgot <a href="#">password?</a></span> </div>
 			</form> 	     
 			
-		
 		
 </div>

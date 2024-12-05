@@ -77,7 +77,7 @@
 
 	<h1> file submit   </h1>
 	<div class="form">
-	<form id="file-submit-form" action="filesubmit" method="post"  enctype="multipart/form-data">
+	<form id="filesubmit" action="filesubmit" method="post"  enctype="multipart/form-data">
 	
 	<input type="file" id="file" name="file" required> <button type="submit">file submit</button> 
 	
